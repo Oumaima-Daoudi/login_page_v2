@@ -18,7 +18,11 @@ namespace login_page_v2
 
             if (IsValidUser(username, password))
             {
-                MessageBox.Show("Authentification réussie ! Vous pouvez accéder à l'application.", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Form2 mainForm = new Form2();
+
+                this.Hide();
+                mainForm.ShowDialog();
+                Application.Exit();
             }
             else
             {
